@@ -8,7 +8,7 @@ var spotifyKeys = new Spotify(keys.spotify);
 var target = process.argv;
 var userInput = "";
 
-// Sportify
+// Spotify
 if (process.argv[2] === "my-tweets") {
   displayTwitter();
 }
@@ -117,12 +117,12 @@ function displayMovie (userInput) {
           "\nActors: " + actors +
           "\n--------------------------";
 
-          console.log(movieData);
-          fs.appendFile("log.txt", movieData, function(error) {
-            if (error) {
-              console.log(error)
-            }
-          })
+        console.log(movieData);
+        fs.appendFile("log.txt", movieData, function(error) {
+          if (error) {
+            console.log(error)
+          }
+        })
       }
     });
 };
